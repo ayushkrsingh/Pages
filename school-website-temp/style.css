@@ -1,0 +1,504 @@
+/* font-family: 'Cinzel Decorative', cursive;
+font-family: 'Dela Gothic One', cursive;
+font-family: 'Nixie One', cursive;
+font-family: 'Red Hat Text', sans-serif; */
+
+
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+::selection{
+    background: white;
+    color: #ff353f;
+}
+body {
+    background: #ffffff;
+}
+
+.nav-stick{
+    width: 100%;
+    height: 100rem;
+    background: linear-gradient(#ff3741, #ff505a);
+}
+
+nav {
+    width: 100%;
+    height: 48rem;
+    background: linear-gradient(#00a03d, #00dd88);
+    z-index: 1;
+    position: absolute;
+    border-bottom: 0.5rem solid white;
+}
+
+.nav-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-box input[type="checkbox"]#ham-check {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 1.3rem;
+    margin-left: 2rem;
+    width: 3.5rem;
+    height: 2.8rem;
+    z-index: 4;
+    opacity: 0;
+    cursor: pointer;
+}
+.nav-box span{
+    width: 3.5rem;
+    height: 0.3rem;
+    background: #000000;
+    position: fixed;
+    top: 2.5rem;
+    left: 2rem;
+    z-index: 4;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.nav-box span::before{
+    content: '';
+    width: 3rem;
+    height: inherit;
+    background: #000000;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transition: 0.5s;
+}
+.nav-box span::after{
+    content: '';
+    width: 3rem;
+    height: inherit;
+    background: #000000;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    transition: 0.5s;
+}
+
+.nav-box img.logo{
+    position: fixed;
+    top: 0.5rem;
+    left: 10rem;
+    width: 4rem;
+    z-index: 2;
+}
+
+
+.nav-box .slide{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-200rem);
+    transition: all 1.2s cubic-bezier(0.54, 0.55, 0.01, 1.11);       transition-delay: calc((var(--n) - 1) * .15s);
+    z-index: 3;
+}
+.nav-box .slide1{
+    background: #feffff0a;
+    width: 200rem;
+    --n: 1;
+    backdrop-filter: blur(30px);
+}
+.nav-box .slide2{
+    background: #6fffb03d;
+    width: 90rem;
+    --n: 2;
+}
+.nav-box .slide3{
+    background: #29c56a73;
+    width: 75rem;
+    --n: 3;
+}
+.nav-box .slide4{
+    background: #1db34a8f;
+    width: 65rem;
+    --n: 4;
+}
+.nav-box .slide5{
+    background: #008327c9;
+    width: 55rem;
+    --n: 5;
+}
+.nav-box input[type="checkbox"]#ham-check:checked ~ .slide{
+    transform: translateX(-2rem);
+}
+.nav-box input[type="checkbox"]#ham-check:hover ~ span:before,.nav-box input[type="checkbox"]#ham-check:hover ~ span:after{
+    width: inherit;
+    border-radius: 2em;
+}
+.nav-box input[type="checkbox"]#ham-check:checked ~ span:before{
+    top: 0.5rem;
+    left: -0.2rem;
+    width: 1.5rem;
+    transform: rotate(45deg);
+    border-radius: 2em;
+}
+.nav-box input[type="checkbox"]#ham-check:checked ~ span:after{
+    top: -0.5rem;
+    left: -0.2rem;
+    width: 1.5rem;
+    transform: rotate(-45deg);
+    border-radius: 2em;
+}
+.nav-box input[type="checkbox"]#ham-check:checked ~ .menu-items{
+    transform: none;
+    opacity: 1;
+}
+.nav-box input[type="checkbox"]#ham-check:checked ~ input[type="checkbox"]#more-about-checkbox, .nav-box input[type="checkbox"]#ham-check:checked ~ h5.show-more-checkbox{
+    transform: none;
+}
+.nav-box input[type="checkbox"]#ham-check:checked ~ .drop-down-home-nav{
+    transform: none;
+    opacity: 1;
+    transition-delay: 1s;
+}
+.menu-items{
+    position: fixed;
+    top: 6.5rem;
+    left: 4rem;
+    transform: translateX(-150rem);
+    transition: all 1s cubic-bezier(0.22, 0.7, 0.01, 1.11);
+    z-index: 3;
+    transition-delay: 0.6s;
+    opacity: 0;
+}
+.menu-items ul{
+    list-style: none;
+}
+.menu-items ul .item{
+    padding-bottom: .8rem;
+}
+.menu-items ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 900;
+    font-size: 4.5rem;
+    transition: 0.1s;
+}
+.menu-items ul li:first-child a{
+    background: white;
+    color: #ff353f;
+    border: 2px solid transparent;
+}
+.menu-items ul li:first-child a:hover{
+    color: white;
+    background: #ff353f;
+    border: 2px solid #ffffff;
+    font-size: 4.7rem;
+}
+.menu-items ul:hover li a{
+    opacity: 0.8;
+}
+.menu-items ul:hover li:first-child a{
+    opacity: 1;
+}
+.menu-items ul li a:hover{
+   font-size: 4.9rem;
+   color: #ffffff;
+   opacity: 1;
+}
+.who-are-we, .nav-box input[type="checkbox"]#more-about-checkbox{
+    display: none;
+}
+.who-are-we{
+    position: fixed;
+    top: 46rem;
+    left: 4rem;
+    transform: translateX(-150rem);
+    transition: all 1s cubic-bezier(0.22, 0.7, 0.01, 1.11);
+    z-index: 3;
+    transition-delay: 0.6s;
+}
+.nav-box input[type="checkbox"]#more-about-checkbox{
+    width: 12rem;
+    height: 3rem;
+    cursor: pointer;
+    opacity: 0;
+}
+.nav-box h5.show-more-checkbox{
+    font-size: 2rem;
+    pointer-events: none;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #6ff0f0;
+}
+
+.drop-down-home-nav{
+    width: 50rem;
+    background: white;
+    color: #ff323d;
+    z-index: 4;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    transform: translateY(-10rem);
+    transition: opacity 1s ease, transform 1s ease-out;
+    opacity: 0;
+    pointer-events: none;
+}
+.drop-down-home-nav h1{
+    font-size: 4rem;
+    font-family: 'Nixie One', cursive;
+    font-weight: 900;
+}
+.drop-down-home-nav p{
+    font-size: 1.6rem;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 900;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15rem;
+    pointer-events: none;
+}
+.header h1{
+    font-size: 5.5rem;
+    font-family: 'Red Hat Text', sans-serif;
+    margin-bottom: .5rem;
+}
+.header p{
+    font-size: 1.9rem;
+    font-family: 'Red Hat Text', sans-serif;
+    width: 65rem;
+}
+.fixed-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 32rem;
+    left: 0rem;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    padding: 2rem 0;
+    pointer-events: none;
+}
+.fixed-header h1{
+    font-size: 18rem;
+    font-family: 'Dela Gothic One', cursive;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0px 0px 14px #00a86269;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000e1;
+}
+.fixed-header p{
+    font-size: 2.1rem;
+    padding: 1rem;
+    font-family: 'Dela Gothic One', cursive;
+    font-weight: 300;
+    letter-spacing: 0.08rem;
+    width: 75rem;
+    margin-top: -2rem;
+    backdrop-filter: blur(200px);
+    background: #ffffff25;
+    color: #a9f1c7;
+}
+.subscription-bar{
+    width: 70%;
+    height: 35rem;
+    position: absolute;
+    top: 82.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(#ff183f, #11d161,transparent);
+    box-shadow: inset 0 0 25rem 5rem #ffffff;
+    border: 6px solid #ffffff6e;
+    /* z-index: 2; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.subscription-bar .bar-box1 h1{
+    font-size: 6rem;
+    margin: 0 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: transparent;
+    font-family: 'Cinzel Decorative', cursive;
+    -webkit-text-stroke-width: 0.15rem;
+    -webkit-text-stroke-color: #002415;
+}
+.subscription-bar .bar-box2 form{
+    /* padding: 0 1rem; */
+    width: 60rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.subscription-bar .bar-box2 form input{
+    display: inline-block;
+    width: 40rem;
+    padding: 1rem 2rem;
+    /* border-radius: 2rem; */
+    background: #f8fffc;
+    border: 5px solid #70c2a0;
+    font-size: 1.7rem;
+    outline: none;
+    transition: 0.2s;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.subscription-bar .bar-box2 form button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #006b398a;
+    border: 5px solid #006b39fd;
+    color: #ffffff;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.subscription-bar .bar-box2 form button:hover{
+    background: #006b39fd;
+    border: 5px solid transparent;
+}
+.subscription-bar .bar-box2 form button:active{
+    transform: scale(0.9);
+}
+.subscription-bar .bar-box2 form input:focus{
+    background: #d4ffebd5;
+    border: 5px solid #00834cee;
+}
+
+footer{
+    position: absolute;
+    top: 94rem;
+    margin-top: 6rem;
+    width: 100%;
+    z-index: -1;
+    height: 54rem;
+    border-top: 7px solid #ffffffe1;
+    background: linear-gradient( #090a09, #00020a);
+}
+
+footer .footer-cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 19rem 15rem 10rem 0;
+    color: white;
+}
+
+.footer-left{
+    position: absolute;
+    left: 3%;
+}
+.footer-left ul li{
+    list-style-type: none;
+    margin: 1.2rem;
+    width: 21rem;
+}
+
+.footer-left ul li i{
+    font-size: 2rem;
+    color: #00ff6a;
+    text-shadow: 0 0 6px #10ff73de;
+    padding-right: 0.3rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.footer-left ul li a{
+    display: inline-block;
+    color: white;
+    font-size: 2.1rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    font-family: 'Dela Gothic One', cursive;
+    transition: 0.2s;
+}
+.footer-left ul li a:hover{
+    color: #00e25e;
+}
+.footer-left ul li:hover i{
+    opacity: 1;
+}
+
+.footer-center{
+    position: absolute;
+    top: 47%;
+    left: 35%;
+    /* transform: translate(-50%, -50%); */
+    color: #e7e7e7;
+    font-size: 1.6rem;
+    font-family: 'Red Hat Text', sans-serif;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+.footer-right{
+    position: absolute;
+    top: 48%;
+    right: 5%;
+}
+.follow-sec h3{
+    color: #afafaf;
+    font-size: 4rem;
+    font-family: 'Nixie One', cursive;
+    margin-bottom: 1.5rem;
+}
+.follow-sec{
+    display: flex;
+    flex-direction: column;
+}
+.follow-sec a{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #ebebeb;
+    font-size: 2rem;
+    transition: 0.2s;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.follow-sec a:hover{
+    /* transform: scale(0.99); */
+    color: #00ff6a;
+    text-shadow: 0 0 2px #00ff6a;
+}
+
+footer .footer-bottom{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #afafaf;
+    font-size: 1.4rem;
+    width: 70%;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.footer-bottom a{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.footer-bottom a:hover{
+    color: #afafaf;
+}

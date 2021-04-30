@@ -1,0 +1,305 @@
+@media (max-width: 1140px){
+    html{
+        font-size: 56%;
+    }
+    /* .nav-stick{
+        height: 90rem;
+    } */
+    .subscription-bar{
+        height: 30rem;
+        top: 85.5rem;
+    }
+    .subscription-bar .bar-box1 h1{
+        font-size: 4.5rem;
+    }
+    .subscription-bar .bar-box2 form input, 
+    .subscription-bar .bar-box2 form button{
+        font-size: 1.7rem;
+    }
+    .footer-left{
+        left: 1%;
+    }
+    .footer-center{
+        left: 32%;
+    }
+}
+@media (max-width: 920px){
+    .menu-items ul li a{
+        font-size: 4rem;
+    }
+    .who-are-we, .nav-box input[type="checkbox"]#more-about-checkbox{
+        display: block;
+    }
+    .drop-down-home-nav{
+        display: none;
+    }
+    .nav-box input[type="checkbox"]#more-about-checkbox:checked ~ .drop-down-home-nav{
+        display: block;
+    }
+    .drop-down-home-nav{
+        top: 50rem;
+        left: 0;
+        width: 100%;
+    }
+}
+@media (max-width: 875px){
+    /* html{
+        font-size: 56%;
+    } */
+    .header h1{
+        font-size: 4.7rem;
+    }
+    .fixed-header h1{
+        font-size: 15rem;
+    }
+    .subscription-bar{
+        width: 100%;
+        border: none;
+        background: #f1f1f1;
+        box-shadow: none;
+    }
+    .subscription-bar .bar-box2 form{
+        width: 70rem;
+    }
+    .subscription-bar .bar-box2 form input{
+        width: 45rem;
+    }
+    .follow-sec h3{
+        font-size: 3rem;
+    }
+    footer .footer-bottom{
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px){
+    
+    
+    .header p{
+        width: 100%;
+        padding: 1rem 3rem;
+    }
+    .who-are-we{
+        display: none;
+    }
+
+    .fixed-header{
+        backdrop-filter: blur(0px);
+        top: 35rem;
+    }
+    .fixed-header h1{
+        font-size: 6rem;
+        font-weight: 500;
+        text-shadow: 0px 0px 14px #00a86269;
+        -webkit-text-stroke-width: 0;
+    }
+    .fixed-header p{
+        display: none;
+    }
+    
+    .drop-down-home-nav{
+        z-index: 1;
+        height: 65rem;
+        background: #ffe9eb;
+        position: absolute;
+        top: 48rem;
+        transform: none;
+        transition: none;
+        opacity: 1;
+        display: block;
+    }
+    .drop-down-home-nav h1{
+        font-size: 4rem;
+        font-family: 'Cinzel Decorative', cursive;
+    }
+    .drop-down-home-nav p{
+        font-size: 1.6rem;
+        font-family: 'Dela Gothic One', cursive;
+        font-weight: 300;
+        margin-top: 1rem;
+    }
+    .subscription-bar{
+        top: 113rem;
+        background: #ffe9eb;
+    }
+    .subscription-bar .bar-box2 form{
+        justify-content: center;
+        width: 100%;
+    }
+    .subscription-bar .bar-box2 form input{
+        width: 35rem;
+        margin-right: 2rem;
+    }
+    footer{
+        top: 130rem;
+        height: 100%;
+    }
+    footer .footer-cont{
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer-left, .footer-center, .footer-right{
+        position: static;
+    }
+    .footer-left ul{
+        margin-top: 7rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-left ul li{
+        margin: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-left ul li i{
+        display: none;
+    }
+    .footer-left ul li a{
+       width: 80vw;
+       font-size: 2.6rem;
+    }
+    .footer-center{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .footer-right{
+        margin-bottom: 4rem;
+    }
+    .follow-sec a{
+        font-size: 2.2rem;
+    }
+    footer .footer-bottom{
+        bottom: 3%;
+        justify-content: space-around;
+        padding: 0 1rem;
+    }
+    footer .footer-bottom p{
+        margin-right: 1.5rem;
+    }
+    footer .footer-bottom p, footer .footer-bottom a{
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 510px){
+    .header h1{
+        font-size: 4rem;
+    }
+    .header p{
+        font-size: 1.8rem;
+    }
+    .drop-down-home-nav p{
+        font-family: 'Red Hat Text', sans-serif; 
+        font-weight: 600;
+    }
+    .subscription-bar .bar-box1 h1{
+        font-size: 4rem;
+    }
+    .subscription-bar .bar-box2{
+        width: 100%;
+    }
+    .subscription-bar .bar-box2 form{
+        flex-direction: column;
+        width: 100%;
+    }
+    .subscription-bar .bar-box2 form input{
+        width: 90%;
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 410px){
+    html{
+        font-size: 52%;
+    }
+    .header h1{
+        font-size: 3rem;
+    }
+    .header p{
+        font-size: 1.6rem;
+    }
+    .drop-down-home-nav p{
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: red;
+    }
+    .subscription-bar .bar-box1 h1{
+        font-size: 3.5rem;
+    }
+    
+    .subscription-bar .bar-box2 form input{
+        padding: 1rem;
+    }
+    footer{
+        top: 135rem;
+    }
+    .footer-left ul li a{
+        font-size: 2rem;
+    }
+    .footer-right{
+        margin-bottom: 11rem;
+    }
+    .footer-center{
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+    footer .footer-bottom{
+        flex-direction: column;
+    }
+    footer .footer-bottom p{
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 355px){
+    .menu-items ul li a{
+        font-size: 3.5rem;
+    }
+    .menu-items ul li a:hover{
+        font-size: 4rem;
+    }
+    .subscription-bar .bar-box1 h1{
+        font-size: 3rem;
+    }
+    .drop-down-home-nav{
+        height: 83rem;
+    }
+    .subscription-bar{
+        top: 130rem;
+    }
+    footer{
+        top: 150rem;
+    }
+}
+@media (max-width: 290px){
+    html{
+        font-size: 48%;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (orientation: landscape) and (max-height: 668px) and (max-width: 920px){
+
+    .who-are-we, .nav-box input[type="checkbox"]#more-about-checkbox{
+        display: none;
+    }
+    .nav-box input[type="checkbox"]#more-about-checkbox:checked ~ .drop-down-home-nav{
+        display: none;
+    }
+    
+}
